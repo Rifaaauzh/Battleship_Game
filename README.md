@@ -119,15 +119,3 @@ The system follows a clear hierarchy:
 * **Extensibility**
   Interfaces are used to allow future enhancements (e.g., AI or multiplayer modes).
 
----
-
-## Next Steps
-
-Further improvements may include:
-
-* AI opponent
-* GUI interface
-* Online multiplayer
-* Enhanced game feedback (animations, effects)
-
----
