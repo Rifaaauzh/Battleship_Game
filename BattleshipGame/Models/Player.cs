@@ -1,6 +1,8 @@
+using Battleship.Interfaces;
+
 namespace Battleship.Models;
 
-public class Player
+public class Player : IPlayer
 {
     public string Name { get; }
     

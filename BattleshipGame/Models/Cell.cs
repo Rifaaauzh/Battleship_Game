@@ -1,6 +1,18 @@
+using Battleship.Enum;
+using Battleship.Interfaces;
+
 namespace Battleship.Models;
 
-public class Cell
+public class Cell : ICell
 {
-    
+    public Position Position {get; set;}
+    public CellState State {get; set;}
+    public IShip?Ship {get; private set;}
+
+    public Cell(Position position)
+    {
+        Position = position;
+        State = CellState.Empty;
+        Ship = null;
+    }
 }

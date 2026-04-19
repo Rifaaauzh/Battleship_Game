@@ -2,8 +2,8 @@ namespace Battleship.Models;
 
 public struct Position
 {
-    int X { get; }
-    int Y { get; }
+    public int X { get; }
+    public int Y { get; }
 
     public Position(int x, int y)
     {
