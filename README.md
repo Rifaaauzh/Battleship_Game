@@ -6,6 +6,59 @@ This project is a console-based implementation of the classic **Battleship game*
 The game focuses on object-oriented design, modular structure, and clean separation of responsibilities.
 
 ---
+##  Game Rules
+
+### Core Rules
+
+- Two players take turns attacking each other's board
+- Each attack targets a coordinate (e.g., A5, B3)
+- The result of an attack can be:
+  - **Hit** → a ship is hit
+  - **Miss** → no ship at the position
+- The game continues until all ships of one player are destroyed
+
+---
+###  Chain Hit Mechanic (Custom Feature)
+
+This game introduces a **Chain Hit mechanic**:
+
+- If a player lands a **Hit**, they get another turn
+- If the result is a **Miss**, the turn switches to the other player
+
+**Purpose:**
+- Rewards accurate targeting
+- Adds strategic depth
+- Makes gameplay more dynamic
+
+**Implementation:**
+Handled inside `GameController`:
+- `Hit` → same player continues
+- `Miss` → switch turn
+
+---
+
+###  Fog of War
+
+- Players cannot see enemy ship positions
+- Only previous attack results (**Hit / Miss**) are visible
+
+---
+
+###  Input Validation
+
+- Players cannot attack the same cell twice
+- Coordinates must be within board boundaries
+- Invalid inputs must be re-entered
+
+---
+
+### Win Condition
+
+- A player wins when all enemy ships are sunk
+- Game status changes to `Finished`
+- Winner is displayed
+
+---
 
 ## Project Structure
 
